@@ -17,8 +17,8 @@ export default {
   plugins: [
     {
       src: '@/plugins/plugin',
-      mode: 'client'
-    }
+      mode: 'client',
+    },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -35,4 +35,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  target: 'static',
+
+  router: {
+    base: '/photolibrary/',
+  },
 }
