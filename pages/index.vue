@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">title</h1>
+      <h1 class="title">20201217</h1>
       <PhotoLibrary />
     </div>
   </div>
@@ -32,9 +32,10 @@ export default {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-weight: bold;
+  font-size: 48px;
   color: #35495e;
   letter-spacing: 1px;
+  margin: 24px auto;
 }
 </style>

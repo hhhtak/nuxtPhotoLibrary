@@ -26,13 +26,21 @@ export default {
     }
   },
   created() {
-    const count = 1
-    const imageArray = []
-
-    for (let i = 1; i <= count; i++) {
-      imageArray.push('/photo/' + String(i) + '.JPG')
+    const categories = { A: 3, B: 3, C: 12, D: 12, E: 6, F: 11 }
+    for (const [category, count] of Object.entries(categories)) {
+      this.images = this.images.concat(this.setPhotos(category, count))
     }
-    this.images = imageArray
+  },
+  methods: {
+    setPhotos(category, count) {
+      const imagePath = process.env.baseUrl + '/private/'
+      const imageArray = []
+
+      for (let i = 1; i <= count; i++) {
+        imageArray.push(imagePath + category + String(i) + '.JPG')
+      }
+      return imageArray
+    },
   },
 }
 </script>
@@ -40,5 +48,6 @@ export default {
 <style scoped>
 .image {
   width: 80vw;
+  margin-top: 5px;
 }
 </style>

@@ -41,4 +41,12 @@ export default {
   router: {
     base: '/photolibrary/',
   },
+
+  env: {
+    prod: process.env.NODE_ENV === 'production',
+    baseUrl:
+      process.env.NODE_ENV === 'production'
+        ? 'https://kost.xsrv.jp/photolibrary/'
+        : 'http://localhost:3000',
+  },
 }
