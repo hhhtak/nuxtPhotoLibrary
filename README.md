@@ -1,4 +1,4 @@
-# photoLibrary
+# vue-gallery-slideshow 
 
 use vue-gallery-slideshow package
 https://www.npmjs.com/package/vue-gallery-slideshow
