@@ -1,5 +1,12 @@
 # photoLibrary
 
+use vue-gallery-slideshow package
+https://www.npmjs.com/package/vue-gallery-slideshow
+
+
+If you want to use it, change the image call part of the components/organism/PhotoLibrary component
+
+
 ## Build Setup
 
 ```bash
