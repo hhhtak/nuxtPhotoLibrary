@@ -34,11 +34,12 @@ export default{
   created() {
     const categories = { A: 3, B: 3, C: 12, D: 12, E: 6, F: 11 }
     for (const [category, count] of Object.entries(categories)) {
+      // @ts-ignore
       this.images = this.images.concat(this.setPhotos(category, count))
     }
   },
   methods: {
-    setPhotos(category:string, count:number) {
+    setPhotos(category:string, count:number): string[] {
       const imagePath = process.env.baseUrl + '/private/'
       const imageArray = []
 
