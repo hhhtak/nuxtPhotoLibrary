@@ -7,8 +7,8 @@
   </div>
 </template>
 
-<script>
-import PhotoLibrary from '~/components/organism/PhotoLibrary'
+<script lang="ts">
+import PhotoLibrary from '~/components/organism/PhotoLibrary.vue'
 
 export default {
   name: 'App',

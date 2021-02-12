@@ -16,10 +16,16 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+
+interface data {
+  images: string[]
+  index: number | null
+}
+
+export default{
   name: 'PhotoLibrary',
-  data() {
+  data(): data {
     return {
       images: [],
       index: null,
@@ -32,7 +38,7 @@ export default {
     }
   },
   methods: {
-    setPhotos(category, count) {
+    setPhotos(category:string, count:number) {
       const imagePath = process.env.baseUrl + '/private/'
       const imageArray = []
 
