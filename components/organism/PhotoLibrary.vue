@@ -17,13 +17,14 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 
 interface data {
   images: string[]
   index: number | null
 }
 
-export default{
+export default Vue.extend({
   name: 'PhotoLibrary',
   data(): data {
     return {
@@ -34,7 +35,6 @@ export default{
   created() {
     const categories = { A: 3, B: 3, C: 12, D: 12, E: 6, F: 11 }
     for (const [category, count] of Object.entries(categories)) {
-      // @ts-ignore
       this.images = this.images.concat(this.setPhotos(category, count))
     }
   },
@@ -49,7 +49,7 @@ export default{
       return imageArray
     },
   },
-}
+})
 </script>
 
 <style scoped>
