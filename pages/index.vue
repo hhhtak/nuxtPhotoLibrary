@@ -8,14 +8,15 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 import PhotoLibrary from '~/components/organism/PhotoLibrary.vue'
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
     PhotoLibrary,
   },
-}
+})
 </script>
 
 <style scoped>
