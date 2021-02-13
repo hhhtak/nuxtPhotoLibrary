@@ -25,10 +25,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [],
@@ -37,6 +34,19 @@ export default {
   build: {},
 
   target: 'static',
+
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true,
+    loaders: {
+      ts: {
+        silent: true,
+      },
+      tsx: {
+        silent: true,
+      },
+    },
+  },
 
   router: {
     base: '/photolibrary/',
