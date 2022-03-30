@@ -20,34 +20,18 @@
 import Vue from 'vue'
 
 interface data {
-  images: string[]
   index: number | null
 }
 
 export default Vue.extend({
   name: 'PhotoLibrary',
+  props: {
+    images: { type: Array, required: true, default: [] },
+  },
   data(): data {
     return {
-      images: [],
       index: null,
     }
-  },
-  created() {
-    const categories = { A: 3, B: 3, C: 12, D: 12, E: 6, F: 11 }
-    for (const [category, count] of Object.entries(categories)) {
-      this.images = this.images.concat(this.setPhotos(category, count))
-    }
-  },
-  methods: {
-    setPhotos(category:string, count:number): string[] {
-      const imagePath = process.env.baseUrl + '/private/'
-      const imageArray = []
-
-      for (let i = 1; i <= count; i++) {
-        imageArray.push(imagePath + category + String(i) + '.JPG')
-      }
-      return imageArray
-    },
   },
 })
 </script>
