@@ -35,7 +35,6 @@ export default Vue.extend({
   },
   methods: {
     setPhotos(category: string, count: number): string[] {
-      console.log('this.$config:', this.$config)
       const { imageBaseUrl, group1Url } = this.$config
       const imagePath = imageBaseUrl + group1Url
       const imageArray = []
