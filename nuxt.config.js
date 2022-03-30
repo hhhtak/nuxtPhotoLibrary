@@ -57,6 +57,7 @@ export default {
         ? process.env.IMAGE_URL
         : 'http://localhost:3000',
     group1Url: process.env.GROUP1,
+    group2Url: process.env.GROUP2,
   },
   privateRuntimeConfig: {},
 }
