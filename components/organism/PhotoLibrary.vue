@@ -37,8 +37,16 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.photoLibrary {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 45px;
+}
+
 .image {
-  width: 80vw;
-  margin-top: 5px;
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto 15px auto;
+  display: block;
 }
 </style>

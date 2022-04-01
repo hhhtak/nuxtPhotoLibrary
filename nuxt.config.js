@@ -58,6 +58,10 @@ export default {
         : 'http://localhost:3000',
     group1Url: process.env.GROUP1,
     group2Url: process.env.GROUP2,
+    movie1: process.env.MOVIE1,
+    movie2: process.env.MOVIE2,
+    movie3: process.env.MOVIE3,
+    logoFile: process.env.LOGO_FILE,
   },
   privateRuntimeConfig: {},
 }

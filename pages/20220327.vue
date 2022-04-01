@@ -2,6 +2,24 @@
   <div class="container">
     <div>
       <h1 class="title">20220327</h1>
+      <h2>OPENING</h2>
+      <video controls>
+        <source
+          :src="$config.imageBaseUrl + $config.group2Url + $config.movie1"
+        />
+      </video>
+      <h2>Profile</h2>
+      <video controls>
+        <source
+          :src="$config.imageBaseUrl + $config.group2Url + $config.movie2"
+        />
+      </video>
+      <h2>END ROLL</h2>
+      <video controls>
+        <source
+          :src="$config.imageBaseUrl + $config.group2Url + $config.movie3"
+        />
+      </video>
       <PhotoLibrary :images="images" :index="index" />
     </div>
   </div>
@@ -28,7 +46,7 @@ export default Vue.extend({
     PhotoLibrary,
   },
   created() {
-    const categories = { A: 6, B: 10, C: 5, D: 6 }
+    const categories = { A: 6, B: 11, C: 5, D: 8 }
     for (const [category, count] of Object.entries(categories)) {
       this.images = this.images.concat(this.setPhotos(category, count))
     }
@@ -40,7 +58,7 @@ export default Vue.extend({
       const imageArray = []
 
       for (let i = 1; i <= count; i++) {
-        imageArray.push(imagePath + category + String(i) + '.jpeg')
+        imageArray.push(imagePath + category + String(i) + '.jpg')
       }
       return imageArray
     },
@@ -67,5 +85,13 @@ export default Vue.extend({
   color: #35495e;
   letter-spacing: 1px;
   margin: 24px auto;
+}
+
+h2 {
+}
+
+video {
+  width: 95vw;
+  margin-bottom: 15px;
 }
 </style>
