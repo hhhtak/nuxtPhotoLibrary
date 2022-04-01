@@ -1,5 +1,9 @@
 <template>
-  <div class="photoLibrary">
+  <div
+    class="photoLibrary"
+    oncontextmenu="return false"
+    onmousedown="return false"
+  >
     <img
       v-for="(image, i) in images"
       :key="i"
@@ -48,5 +52,7 @@ export default Vue.extend({
   max-width: auto;
   margin: 0 auto 15px auto;
   display: block;
+  /* 画像の保存を制御 */
+  pointer-events: none;
 }
 </style>

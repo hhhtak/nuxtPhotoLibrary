@@ -87,9 +87,6 @@ export default Vue.extend({
   margin: 24px auto;
 }
 
-h2 {
-}
-
 video {
   width: 95vw;
   margin-bottom: 15px;
