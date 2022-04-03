@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div
+    oncontextmenu="return false"
+    onmousedown="return false"
+    oncopy="return false"
+  >
     <Nuxt />
   </div>
 </template>
@@ -51,5 +55,12 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+body,
+html {
+  pointer-events: none;
+  -webkit-touch-callout: none; /* リンク長押しのポップアップを無効化 */
+  -webkit-user-select: none; /* テキスト長押しの選択ボックスを無効化 */
 }
 </style>
