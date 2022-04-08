@@ -46,7 +46,7 @@ export default Vue.extend({
     PhotoLibrary,
   },
   created() {
-    const categories = { A: 6, B: 11, C: 5, D: 8 }
+    const categories = { A: 6, B: 13, C: 5, D: 8 }
     for (const [category, count] of Object.entries(categories)) {
       this.images = this.images.concat(this.setPhotos(category, count))
     }
