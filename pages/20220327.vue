@@ -6,18 +6,21 @@
       <video controls>
         <source
           :src="$config.imageBaseUrl + $config.group2Url + $config.movie1"
+          type="video/mp4"
         />
       </video>
       <h2>Profile</h2>
       <video controls>
         <source
           :src="$config.imageBaseUrl + $config.group2Url + $config.movie2"
+          type="video/mp4"
         />
       </video>
       <h2>END ROLL</h2>
       <video controls>
         <source
           :src="$config.imageBaseUrl + $config.group2Url + $config.movie3"
+          type="video/mp4"
         />
       </video>
       <PhotoLibrary :images="images" :index="index" />
@@ -90,5 +93,8 @@ export default Vue.extend({
 video {
   width: 95vw;
   margin-bottom: 15px;
+  pointer-events: auto;
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
 }
 </style>
